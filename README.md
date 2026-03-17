@@ -1,4 +1,4 @@
-# 🐾 Plataforma de Adoção e Rede de Apoio Animal
+ 🐾 Focinho Amigo
 
 > Um sistema web completo para conectar animais que precisam de um lar a adotantes, ONGs e médicos veterinários voluntários.
 
