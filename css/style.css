@@ -1,0 +1,508 @@
+/* =================================
+   1. Estilos Globais
+   ================================= */
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* =================================
+   2. Cabeçalho e Navegação
+   ================================= */
+.top-gradient-bar {
+    height: 40px;
+    background: linear-gradient(to right, #004aad, #cb6ce6);
+}
+
+.navbar {
+    height: 100px;
+}
+
+.navbar-brand img {
+    max-height: 50px;
+    /* Adicione um filtro para o logo se a imagem for escura */
+    /* filter: brightness(0) invert(1); */
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #1800ad;
+    font-weight: normal;
+    font-size: 20px;
+    letter-spacing: 1.4px;
+    margin: 0 15px;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.navbar .navbar-nav .nav-link:not(.btn-adotar)::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #1800ad;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-out;
+}
+
+.navbar .navbar-nav .nav-link:not(.btn-adotar):hover::after {
+    transform: scaleX(1);
+}
+
+.navbar .navbar-nav .nav-link.btn-adotar {
+    background: linear-gradient(to right, #004aad, #cb6ce6);
+    color: white;
+    padding: 8px 30px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.navbar .navbar-nav .nav-link.btn-adotar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(0, 60, 138), #a356b8);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease !important;
+}
+
+.navbar .navbar-nav .nav-link.btn-adotar:hover::before {
+    opacity: 1;
+}
+
+#link-login, #link-cadastro {
+    margin: 10px;
+    font-size: 20px;
+    text-align: right;
+
+}
+
+.login-text a {
+    color: #1800ad;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 1.2;
+    transition: color 0.3s ease;
+    padding-right: 10px;
+}
+
+.login-text a:hover {
+    color: #352a7c;
+}
+
+.user-name {
+    color: #1800ad;
+    font-weight: bold;
+}
+
+.user-icon {
+    color: #1800ad;
+}
+
+/* =================================
+   3. Seções Principais (Hero)
+   ================================= */
+.hero-section {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-clip: border-box;
+    min-height: 514px; /* Usar min-height para flexibilidade */
+    color: white;
+    letter-spacing: 1.4px;
+}
+
+#adocao {
+    background-image: linear-gradient(to right, rgba(0, 74, 173, 0.4), rgba(203, 108, 230, 0.4)), url('../img/gato.jpg');
+    background-position: center 20%;
+}
+
+#veterinario {
+    background-image: linear-gradient(to left, rgba(0, 74, 173, 0.4), rgba(203, 108, 230, 0.4)), url('../img/veterinario.jpg');
+    background-position: center center;
+}
+
+#resgate {
+    background-image: linear-gradient(to right, rgba(0, 74, 173, 0.4), rgba(203, 108, 230, 0.4)), url('../img/resgate.png');
+    background-position: center 40%;
+}
+
+#formulario {
+    background-image: linear-gradient(to left, rgba(0, 74, 173, 0.4), rgba(203, 108, 230, 0.4)), url('../img/formulario.png');
+    background-position: center bottom;
+}
+
+.hero-section .botoes {
+    padding-bottom: 2%;
+}
+
+.btn-outline-custom {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: 5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    min-width: 250px;
+    text-align: center;
+}
+
+.btn-outline-custom:hover {
+    background-color: white;
+    color: #333;
+}
+
+.description {
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.description h1 {
+    font-size: 3.5rem; /* Usando 'rem' para melhor acessibilidade */
+    font-weight: bold;
+}
+
+.description p {
+    font-size: 1rem;
+}
+
+/* Ajustes de alinhamento para o grid semântico */
+.description.text-start {
+    padding-right: 5%;
+}
+
+.description.text-end {
+    padding-left: 5%;
+}
+
+/* =================================
+   4. Rodapé
+   ================================= */
+.site-footer {
+    background: linear-gradient(to right, #004aad, #cb6ce6);
+    color: white;
+    padding-top: 40px;
+}
+
+.footer-logo {
+    max-height: 40px;
+    filter: brightness(0) invert(1); /* Deixa o logo branco */
+}
+
+.site-footer .footer-desc {
+    padding-right: 10%;
+}
+
+.site-footer .footer-desc p {
+    text-align: justify;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    line-height: 35px;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-out;
+}
+
+.footer-links a:hover::after {
+    transform: scaleX(1);
+}
+
+.copyright {
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+/* =================================
+   5. Estilos para Modais
+   ================================= */
+.profile-choice-card {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.profile-choice-card:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.02); /* Efeito de crescimento sutil */
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.profile-choice-card i {
+    margin-right: 1.5rem;
+    color: #f8f9fa; /* Cor branca suave para o ícone */
+}
+
+.profile-choice-card .profile-text h5 {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.profile-choice-card .profile-text p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.btn-color {
+    background: linear-gradient(to right, #004aad, #7085db);
+    color: white;
+    margin: 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-color:hover {
+    background: linear-gradient(to right, #094a9f, #4a6bb1);
+    color: #e0e0e0;
+    transform: translateY(-2px); /* Efeito sutil de elevação */
+}
+
+.btn-moradia {
+    background-color: rgba(53, 42, 124, 0.6);
+    color: white;
+    margin: 5px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-moradia:hover {
+    background-color: #352a7c;
+    color: #e0e0e0;
+}
+
+/* =================================
+   Estilos para a Modal Glassmorphism
+   ================================= */
+
+/* 1. Aplica o desfoque e escurece o fundo da página (backdrop) */
+.modal-backdrop.show {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* 2. Estiliza o conteúdo da modal para parecer vidro */
+.modal-content.modal-glass {
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    
+    /* O gradiente com transparência é a chave para o efeito */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    
+    /* Borda sutil que ajuda a definir o painel de vidro */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    
+    /* Desfoque no fundo do próprio painel (intensifica o efeito) */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* 3. Ajusta os elementos internos para o tema claro sobre escuro */
+.modal-glass .modal-header,
+.modal-glass .modal-body,
+.modal-glass .modal-footer {
+    color: white; /* Garante que o texto padrão seja branco */
+}
+
+.modal-glass .modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Linha divisória sutil */
+}
+
+.modal-glass .modal-footer {
+    border-top: none;
+}
+
+/* Deixa o botão de fechar 'X' branco para melhor contraste */
+.modal-glass .btn-close {
+    filter: brightness(0) invert(1);
+}
+
+/* 4. Estiliza os campos de formulário (inputs) */
+.modal-glass .form-control {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo transparente para os inputs */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white; /* Cor do texto digitado */
+    border-radius: 0.5rem;
+}
+
+.modal-glass .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Placeholder mais claro */
+}
+
+.modal-glass .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+}
+
+/* 5. Estiliza os links e textos adicionais no formulário */
+.modal-glass .form-text {
+    color: rgba(255, 255, 255, 0.8); /* Cor para o texto "Ainda não tem conta?" */
+}
+
+.modal-glass .form-text a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.modal-glass .form-text a:hover {
+    text-decoration: underline;
+}
+
+/* 6. Estiliza o botão de Entrar */
+.modal-glass .btn-primary {
+    background: linear-gradient(to right, #004aad, #7085db);
+    border: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.modal-glass .btn-primary:hover {
+    background: linear-gradient(to right, #094a9f, #4a6bb1);
+    transform: translateY(-2px);
+}
+
+/* =================================
+   Estilos para a Modal Split com Glassmorphism no Formulário
+   ================================= */
+
+/* Define a largura máxima da modal 'extra large' */
+.modal-dialog.modal-xl {
+    max-width: 1000px; /* Você pode ajustar este valor */
+}
+
+/* 1. Aplica o desfoque e escurece o fundo da página (backdrop) */
+/* Este é o mesmo do glassmorphism normal, desfoca o conteúdo da página atrás da modal */
+.modal-backdrop {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo escuro semi-transparente */
+}
+
+/* Remove estilos padrão do Bootstrap para a nossa row assumir o controle total */
+.modal-split.modal-content {
+    background: none; /* remove o fundo branco padrão */
+    border: none;     /* remove a borda padrão */
+    border-radius: 0.5rem;
+    overflow: hidden; 
+}
+
+/* Coluna da Esquerda (Formulário com Glassmorphism) */
+.form-container {
+    padding: 2.5rem; /* Espaçamento interno generoso */
+    position: relative;
+    height: 100%;
+    
+    /* AQUI APLICAMOS O EFEITO GLASSMORPHISM APENAS NESTA COLUNA */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px); /* Desfoque apenas no fundo do formulário */
+    -webkit-backdrop-filter: blur(10px);
+    color: white; /* Cor do texto dentro do formulário */
+}
+
+/* Estilos para os elementos de texto e labels dentro do formulário glass */
+.form-container .form-label,
+.form-container .modal-title {
+    color: white;
+}
+
+/* Ajustes para inputs em um formulário glassmorphism */
+.form-container .form-control {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo transparente para os inputs */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borda clara */
+    color: white; /* Cor do texto digitado */
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.form-container .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Placeholder mais claro */
+}
+
+/* Cor do texto quando o input está focado */
+.form-container .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+}
+
+
+/* Botão de fechar customizado para a Split Modal */
+.form-container .btn-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 10;
+    filter: brightness(0) invert(1); /* Deixa o X branco */
+    opacity: 0.8;
+}
+.form-container .btn-close:hover {
+    opacity: 1;
+}
+
+/* Coluna da Direita (Imagem que ocupa todo o espaço lateral) */
+.modal-image-side {
+    background-image: url('../img/Pet Animado para Cadastro.jpg'); /* VERIFIQUE O CAMINHO DA SUA IMAGEM AQUI */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Estilo para o botão de 'Cadastrar' */
+.form-container .btn-primary {
+    background: linear-gradient(to right, #004aad, #7085db);
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.form-container .btn-primary:hover {
+    background: linear-gradient(to right, #094a9f, #4a6bb1);
+    transform: translateY(-1px);
+}
+
+#loginform p, a {
+    color: white;
+}

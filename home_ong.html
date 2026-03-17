@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Painel da ONG - Adoção Inteligente</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="top-gradient-bar"></div>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand ps-5" href="#">
+                    <img src="#" alt="Logotipo Adoção Inteligente">
+                </a>
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Meus Animais</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Candidaturas</a></li>
+                    </ul>
+                    <div class="login-section d-flex pe-5 align-items-center">
+                        <div class="dropdown">
+                            <a href="#" class="d-flex align-items-center login-text user-dropdown-toggle"
+                                data-bs-toggle="dropdown">
+                                <div class="text-end ms-2">
+                                    <span class="user-name">Instituto Patas Amigas</span>
+                                    <small class="user-role">ONG</small>
+                                </div>
+                                <i class="fas fa-shield-alt fa-2x user-icon ms-2"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                        data-bs-target="#modalMeuPerfil"> Perfil da ONG</a></li>
+                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                        data-bs-target="#modalEndereco"> Endereço</a></li>
+                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                        data-bs-target="#modalConfiguracoes"> Configurações</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item text-danger" href="index.html"> Sair</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="dashboard-header">
+            <div class="container">
+                <h1>Painel da ONG</h1>
+                <p>Gerencie os animais cadastrados e acompanhe os processos de adoção.</p>
+                <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalDivulgarPet">
+                    <i class="fas fa-plus-circle me-2"></i> Cadastrar Novo Animal
+                </button>
+            </div>
+        </section>
+
+        <section class="container my-5">
+            <h2 class="text-center mb-4">Animais Cadastrados</h2>
+            <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th>Foto</th>
+                            <th>Nome</th>
+                            <th>Espécie</th>
+                            <th>Status</th>
+                            <th class="text-end">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="https://via.placeholder.com/60x60.png?text=Rex" class="rounded-circle"
+                                    alt="Rex"></td>
+                            <td>Rex</td>
+                            <td>Cachorro</td>
+                            <td><span class="badge bg-success">Disponível</span></td>
+                            <td class="text-end">
+                                <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
+                                <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://via.placeholder.com/60x60.png?text=Mimi" class="rounded-circle"
+                                    alt="Mimi"></td>
+                            <td>Mimi</td>
+                            <td>Gato</td>
+                            <td><span class="badge bg-warning text-dark">Em processo</span></td>
+                            <td class="text-end">
+                                <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
+                                <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
